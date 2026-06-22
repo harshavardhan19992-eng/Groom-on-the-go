@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawGo - Doorstep Pet Grooming</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f8fafc;
+      color: #333;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+      padding: 15px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ff6b35;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin-left: 25px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 8%;
+      background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+        url('https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #ff6b35;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      margin: 10px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 90px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 50px;
+      color: #ff6b35;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+      text-align: center;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card h3 {
+      margin: 15px 0;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff6b35;
+      margin-top: 10px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .step {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .review {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+    }
+
+    .booking {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    button {
+      background: #ff6b35;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    footer {
+      background: #1e293b;
+      color: white;
+      padding: 40px 8%;
+      text-align: center;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+    }
+
+    @media(max-width:768px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">🐾 PawGo</div>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#booking">Book</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+
+    <div>
+      <h1>Doorstep Pet Grooming</h1>
+
+      <p>Professional Pet Grooming Services Delivered To Your Home.</p>
+
+      <a href="#booking" class="btn">Book Appointment</a>
+      <a href="https://wa.me/919876543210" class="btn">WhatsApp Us</a>
+    </div>
+
+  </section>
+
+  <section id="services">
+
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="services">
+
+      <div class="card">
+        <h3>🛁 Basic Bath</h3>
+        <p>Bath, drying and brushing.</p>
+        <div class="price">₹499</div>
+      </div>
+
+      <div class="card">
+        <h3>✂️ Full Grooming</h3>
+        <p>Bath, haircut, nail trim and ear cleaning.</p>
+        <div class="price">₹999</div>
+      </div>
+
+      <div class="card">
+        <h3>💎 Premium Spa</h3>
+        <p>Luxury spa treatment and styling.</p>
+        <div class="price">₹1499</div>
+      </div>
+
+      <div class="card">
+        <h3>🐱 Cat Grooming</h3>
+        <p>Special care grooming for cats.</p>
+        <div class="price">₹899</div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="how">
+
+    <h2 class="section-title">How It Works</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <h3>1️⃣ Book Online</h3>
+        <p>Select your preferred service and time.</p>
+      </div>
+
+      <div class="step">
+        <h3>2️⃣ Groomer Arrives</h3>
+        <p>Our expert groomer visits your home.</p>
+      </div>
+
+      <div class="step">
+        <h3>3️⃣ Pet Gets Pampered</h3>
+        <p>Safe and stress-free grooming session.</p>
+      </div>
+
+      <div class="step">
+        <h3>4️⃣ Pay & Review</h3>
+        <p>Easy payment and feedback collection.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="reviews">
+
+    <h2 class="section-title">Happy Customers</h2>
+
+    <div class="testimonials">
+
+      <div class="review">
+        ⭐⭐⭐⭐⭐
+        <p>Excellent grooming service. My dog loved it!</p>
+        <strong>- Rahul</strong>
+      </div>
+
+      <div class="review">
+        ⭐⭐⭐⭐⭐
+        <p>Very professional and arrived on time.</p>
+        <strong>- Priya</strong>
+      </div>
+
+      <div class="review">
+        ⭐⭐⭐⭐⭐
+        <p>Best doorstep pet service in town.</p>
+        <strong>- Kiran</strong>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="booking">
+
+    <h2 class="section-title">Book Appointment</h2>
+
+    <div class="booking">
+
+      <form id="bookingForm">
+
+        <input type="text" placeholder="Full Name" required>
+
+        <input type="tel" placeholder="Phone Number" required>
+
+        <input type="text" placeholder="Address" required>
+
+        <select required>
+          <option value="">Select Pet</option>
+          <option>Dog</option>
+          <option>Cat</option>
+        </select>
+
+        <select required>
+          <option value="">Select Service</option>
+          <option>Basic Bath</option>
+          <option>Full Grooming</option>
+          <option>Premium Spa</option>
+          <option>Cat Grooming</option>
+        </select>
+
+        <input type="date" required>
+
+        <textarea rows="4" placeholder="Additional Notes"></textarea>
+
+        <button type="submit">Confirm Booking</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <h3>PawGo Doorstep Pet Grooming</h3>
+
+    <p>📞 +91 98765 43210</p>
+
+    <p>✉ hello@pawgo.com</p>
+
+    <p>© 2026 PawGo. All Rights Reserved.</p>
+
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/919876543210">
+    💬
+  </a>
+
+  <script>
+    document.getElementById("bookingForm")
+      .addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Booking submitted successfully! We will contact you shortly.");
+        this.reset();
+      });
+  </script>
+
+</body>
+
+</html>
