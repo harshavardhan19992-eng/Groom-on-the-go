@@ -56,8 +56,8 @@ The booking form captures:
 
 ## Contact Information
 
-📞 **Phone:** +91 98765 43210
-✉️ **Email:** hello@pawgo.com
+📞 **Phone:** +91 96182 06927
+✉️ **Email:** hellopawgo@gmail.com
 💬 **WhatsApp:** [Click the WhatsApp button on the website]
 
 ## Browser Support
