@@ -282,7 +282,86 @@
     <div class="steps">
 
       <div class="step">
-        <h3>1️⃣ Book Online</h3>
+        <h3>1️⃣ Book Online</<section id="booking">
+  <h2>Book an Appointment</h2>
+
+  <form onsubmit="book(event)">
+
+    <input type="text" placeholder="Owner Name" required>
+
+    <input type="text" placeholder="Pet Name" required>
+
+    <input type="tel" placeholder="Phone Number" required>
+
+    <input type="date" required>
+
+    <h3>🛁 Bath Services</h3>
+
+    <select required>
+      <option value="">Select Bath Service</option>
+      <option>Basic Bath - ₹599</option>
+      <option>Premium Bath - ₹899</option>
+      <option>Medicated Bath - ₹999</option>
+      <option>De-Shedding Bath - ₹1199</option>
+      <option>Flea & Tick Bath - ₹1099</option>
+      <option>Puppy Bath - ₹699</option>
+      <option>Hypoallergenic Bath - ₹1099</option>
+      <option>Whitening Bath - ₹999</option>
+      <option>Oatmeal Bath - ₹899</option>
+      <option>Luxury Spa Bath - ₹1499</option>
+    </select>
+
+    <h3>✂️ Haircut Services</h3>
+
+    <select required>
+      <option value="">Select Haircut Type</option>
+      <option>Full Body Trim - ₹699</option>
+      <option>Breed Standard Cut - ₹899</option>
+      <option>Teddy Bear Cut - ₹999</option>
+      <option>Puppy Cut - ₹799</option>
+      <option>Summer Cut - ₹699</option>
+      <option>Lion Cut - ₹1199</option>
+      <option>Sanitary Trim - ₹399</option>
+      <option>Face Trim - ₹299</option>
+      <option>Paw Trim - ₹299</option>
+      <option>Custom Styling - ₹1499</option>
+    </select>
+
+    <h3>🐾 Additional Services</h3>
+
+    <label><input type="checkbox"> Nail Trimming (+₹149)</label><br>
+    <label><input type="checkbox"> Nail Grinding (+₹199)</label><br>
+    <label><input type="checkbox"> Foot Bath (+₹199)</label><br>
+    <label><input type="checkbox"> Paw Pad Shaving (+₹199)</label><br>
+    <label><input type="checkbox"> Ear Cleaning (+₹149)</label><br>
+    <label><input type="checkbox"> Ear Flushing (+₹299)</label><br>
+    <label><input type="checkbox"> Anal Gland Expression (+₹299)</label><br>
+    <label><input type="checkbox"> Teeth Brushing (+₹199)</label><br>
+    <label><input type="checkbox"> De-Matting (+₹399)</label><br>
+    <label><input type="checkbox"> Coat Conditioning (+₹249)</label><br>
+    <label><input type="checkbox"> Flea & Tick Treatment (+₹399)</label><br>
+    <label><input type="checkbox"> Skin Moisturizing Treatment (+₹299)</label><br>
+
+    <br><br>
+
+    <textarea
+      placeholder="Special Instructions for Groomer"
+      rows="4"
+      style="width:100%;padding:10px;"
+    ></textarea>
+
+    <br><br>
+
+    <button class="btn" type="submit">
+      Book Appointment
+    </button>
+
+  </form>
+
+  <p id="msg"></p>
+
+</section>    
+        
         <p>Select your preferred service and time.</p>
       </div>
 
